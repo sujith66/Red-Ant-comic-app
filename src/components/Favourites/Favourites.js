@@ -5,7 +5,7 @@ import _ from "lodash";
 import "./Favourites.css";
 
 const Favourites = () => {
-  const [{ favourites }, dispatch] = useStateValue();
+  const [{ favourites }] = useStateValue();
   return (
     <div className="favourite">
       <div className="favourite__wrapper">

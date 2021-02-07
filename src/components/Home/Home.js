@@ -5,7 +5,7 @@ import MarvelHero from "../MarvelHero/MarvelHero";
 import { css } from "@emotion/core";
 import BarLoader from "react-spinners/BarLoader";
 import { useStateValue } from "../Context/ContextProvider";
-import ls from 'local-storage';
+
 
 //Styles for loader
 const override = css`
@@ -15,13 +15,12 @@ const override = css`
 `;
 
 const Home = () => {
-    const [{favourites}, dispatch] = useStateValue();
+    const [{favourites}] = useStateValue();
   const [heroList, setHeroList] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-      const Favourites = ls.get('favourites');
-      const favItem = ls.get('isFavourite')
+    
     const fetchComicsData = async () => {
         let heroListArray = [];
         try {
