@@ -1,0 +1,26 @@
+.home {
+    display: grid;
+    grid-template-columns:  repeat(auto-fit, minmax(500px, 1fr));
+    padding: 1rem;
+    width: 100%;
+    height: calc(100vh - 150px);
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: visible;
+    gap: 10px;
+}
+
+.home__wrapper {
+    display: grid;
+    grid-template-columns:  repeat(auto-fit, minmax(500px, 1fr));
+}
+
+
+.home__cardItem {
+    
+    align-items: center;
+    border-radius: 4px;
+    padding: 20px;
+    position: relative;
+}

@@ -1,0 +1,33 @@
+.favourite {
+    display: grid;
+    grid-template-columns:  repeat(auto-fit, minmax(500px, 1fr));
+    padding: 1rem;
+    width: 100%;
+    height: calc(100vh - 150px);
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: visible;
+    gap: 10px;
+}
+
+.favourite__wrapper {
+    display: grid;
+    grid-template-columns:  repeat(auto-fit, minmax(500px, 1fr));
+}
+
+
+.favourite__cardItem {
+    
+    align-items: center;
+    border-radius: 4px;
+    padding: 20px;
+    position: relative;
+}
+.favourite__message{
+    color: #808080;
+    margin: 0 auto;
+    margin-top: 14rem;
+    font-size: 24px;
+    font-weight: 400;
+}
