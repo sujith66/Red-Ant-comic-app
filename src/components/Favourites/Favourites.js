@@ -14,7 +14,7 @@ const Favourites = () => {
         ) : (
           favourites.map((item) => (
             <div className="favourite__cardItem">
-              <MarvelHero key={item.id} list={item} favourite={true} />
+              <MarvelHero key={item.id} list={item} IsFavourite={true} />
             </div>
           ))
         )}

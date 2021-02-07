@@ -5,16 +5,16 @@ import "./MarvelHero.css";
 
 
 
-const MarvelHero = ({ list, favourite }) => {
+const MarvelHero = ({ list, IsFavourite }) => {
 
     const [, dispatch] = useStateValue();
-    const [isFavourite, setFavourite] = useState(false);
+    const [isFavouriteHero, setFavouriteHero] = useState(false);
    
 
       const handleFavourties = ()=>{
         let favArray = [];
-        setFavourite(!isFavourite);
-        if(isFavourite || favourite){
+        setFavouriteHero(!isFavouriteHero);
+        if(isFavouriteHero || IsFavourite){
             dispatch({
                 type: "REMOVE_FROM_FAVOURITES",
                 payload: {
@@ -25,7 +25,7 @@ const MarvelHero = ({ list, favourite }) => {
             favArray.push({
                 id: list.id,
                 image: list.image,
-                isFavourite
+                isFavouriteHero
             })
             dispatch({
                 type: "ADD_TO_FAVOURITES",
@@ -44,7 +44,7 @@ const MarvelHero = ({ list, favourite }) => {
             <img src={list.image} alt="hero" />
           </div>
           <div className="hero__fav">
-              <button onClick={handleFavourties}>{(isFavourite || favourite) ?  <span>Remove from favourites</span>  : <span>Add to favourites</span>}</button>
+              <button onClick={handleFavourties}>{(isFavouriteHero || IsFavourite) ?  <span>Remove from favourites</span>  : <span>Add to favourites</span>}</button>
           </div>
         </div>
     </div>
@@ -52,6 +52,6 @@ const MarvelHero = ({ list, favourite }) => {
 };
 MarvelHero.propTypes = {
     list: proptypes.array,
-    favourite: proptypes.bool,
+    IsFavourite: proptypes.bool,
 }
 export default MarvelHero;

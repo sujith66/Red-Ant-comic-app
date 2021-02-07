@@ -55,7 +55,7 @@ const Home = () => {
         {heroList.map((item) => (
             
             <div className="home__cardItem">
-         {favourites.some(ele => item.id === ele.id) ? <MarvelHero key={item.id} list={item} favourite={true}/> : <MarvelHero key={item.id} list={item} favourite={false}/> }
+         {favourites.some(ele => item.id === ele.id) ? <MarvelHero key={item.id} list={item} IsFavourite={true}/> : <MarvelHero key={item.id} list={item} favourite={false}/> }
           </div>
         ))}
         
