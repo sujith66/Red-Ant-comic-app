@@ -7,18 +7,12 @@ import "./MarvelHero.css";
 
 const MarvelHero = ({ list, favourite }) => {
 
-    const propTypes = {
-        list: proptypes.array.isRequired,
-        favourite: proptypes.bool.isRequired
-      };
-
-    const [{}, dispatch] = useStateValue();
+    const [, dispatch] = useStateValue();
     const [isFavourite, setFavourite] = useState(false);
    
 
       const handleFavourties = ()=>{
         let favArray = [];
-        
         setFavourite(!isFavourite);
         if(isFavourite || favourite){
             dispatch({
@@ -56,5 +50,8 @@ const MarvelHero = ({ list, favourite }) => {
     </div>
   );
 };
-
+MarvelHero.propTypes = {
+    list: proptypes.array,
+    favourite: proptypes.bool,
+}
 export default MarvelHero;

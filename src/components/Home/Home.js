@@ -27,12 +27,13 @@ const Home = () => {
           const response = await axios.instance.get(
             `/public/comics?ts=100&apikey=288cdc0b249d34fd6efa9b276567a213&hash=${axios.hash}`
           );
-          response.data.data.results.map((hero) => {
+          response.data.data.results.map(hero => {
             heroListArray.push({
               id: hero.id,
               image: `${hero.thumbnail.path}/portrait_medium.${hero.thumbnail.extension}`,
               isFavourite: false
             });
+            return heroListArray;
           });
         
           setHeroList(heroListArray);
