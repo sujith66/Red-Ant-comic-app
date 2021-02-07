@@ -6,7 +6,7 @@ const Header = () => {
         <div className="header">
             <header className=" site-header">
             <Link to="/" className="header__heading"><h1 className="site-heading">Red Ant Comics</h1></Link>
-            <Link to="/favourite"><button className="favourites-toggle js-favourites-toggle"></button></Link>
+            <Link to="/favourite"><button title="All Favourites" className="favourites-toggle js-favourites-toggle"></button></Link>
             </header>
         </div>
     )

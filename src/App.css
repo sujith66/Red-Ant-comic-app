@@ -137,5 +137,6 @@
         border-radius: 50%;
         background: url('./images/star.svg') 50% 50% no-repeat;
         background-size: 60%;
+        cursor: pointer;
     }
  
